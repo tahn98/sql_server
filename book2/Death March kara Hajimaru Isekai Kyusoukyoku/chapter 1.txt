@@ -1,0 +1,227 @@
+﻿Translator\'s note: This is a complete re-translation effort starting from the very first chapter of Death March Web Novel version based on the latest edit by the author at the time of the translation, some or the majority of the parts may differ greatly from the initial version (mostly due to more accurate translation) and I intend to take better care as to not mis-translate a word. Rest assured, older translation will not be deleted and you can still read all chapters where they are; re-translated chapters will have their own page. This has been a long time coming, please bear with me. :)
+
+(Author\'s note below)
+※ 2016/12/17 To those who read this for the first time (especially those who come here after reading the manga or watching the anime version)
+The story flow of the web novel version differs greatly to that of the anime (as well as the manga and light novel version)
+In addition, this web novel version has not been revised since it was first written, thus there is a lot of superfluous explanations and it may be lacking in descriptions, please be warned.
+For those who want an easier to read version, have a look at the light novel version if you would.
+
+
+
+Orbiting stars.
+Innumerably, endlessly.
+Have you ever seen a shooting star?
+Whether its fleetingness captivates you visually, or prompts you to make a wish, I think to each their own.
+
+However, would you ever get the chance to watch a falling meteorite as it tears through the sky before your very eyes?
+Breaking the sky apart accompanied by loud thunderous roars, striking the earth with overwhelming mass and speed.
+
+There\'s probably some who have seen the scene on TV or video sites... Yet I\'m sure no one would wish to look at it closely in person as they fall down.
+
+Yes, right now, around a hundred meteorites are falling down the earth one after another before my very eyes.
+
+Nay.
+
+I shouldn\'t speak like it\'s none of my business. This cataclysm was perpetrated by none other than yours truly.
+
+As a result of me picking a choice without thinking 10 minutes earlier, the earth is being gouged out by meteorites now.
+The meteorites strike the ground a few kilometer ahead, infringing the [Enemies] there, while the dots displayed on the Radar in the corner of my view are disappearing as life disappears at the impact point.
+
+And once most of the meteorites have vanished into the earth, sounds of something falling finally arrived here slightly late, then after a bit, tremor hit.
+
+Right before a cloud of dust that looks like it\'s crawling on the ground arrives here...
+
+Suddenly, a pain that feels like divine punishment assaulted me.
+
+It\'s as if my head has been split open.
+
+As if my body is getting torn apart.
+
+A moment before I parted with my consciousness due to the pain, I got swept away by the cloud of dust.
+
+
+
+◇
+
+
+
+Time goes back a bit.
+
+I\'m working in my day off to meet the delayed deadline of an already delayed project. I\'m a programmer by trade working at a subcontractor outsourcing company that develops stuff like smartphone games, and PC browser games as commissioned by large publishers.
+
+Even for a black company, they don\'t usually assign one person to take care of two projects or more at once. However, a young junior programmer disappeared on us on the verge of the delivery deadline, leaving multiple bugs and spec changes behind! Darn it!
+There are only two programmers in this company with its high turnover rate, Junior-shi and me. Of course the company refused to post an urgent filling, and I ended up having to take care of not only my project, but also Junior-shi\'s.
+
+"Alright, done with inputting and filling in all the Classes, now I just need to get auto-document generate documentations and relation diagrams from the source code, then I can start the bug hunting for real."
+
+I stretch a bit and crack my neck.
+Looking around, practically all the seats are filled here, you wouldn\'t believe it\'s supposed to be holiday. The person sitting next to me, a debugging subcontractor, is muttering something while working on his assignment, but no one is paying him any heed. No one has any time to do so. All designers and planners around me continue to work silently with dead vacant eyes.
+
+When I came back to my workspace after getting a cup of coffee, my PC was already done with its job, displaying documents needed for debugging.
+
+Still, I really can\'t get fired up working without documentations like this.
+
+Guess there\'s no point in complaining to Junior-shi who was thrown into real world work without any OJT time. There were four programmers when Junior-shi joined half a year ago, but now there\'s only me, is this company going to be alright I wonder.
+
+"Sat--, Suzuki-san, we\'ve got a new claim from our client, they said WW was too hard for beginners go fix it, what do you think."
+
+This darn dude almost blurted out Satou. We\'ve been in the same team for half a year already, stop getting it wrong!
+
+When I turn around, the director who doubles as a planner, Mr. Obese is walking here with his usual troubled look.
+He looks gleeful somewhat even though we\'re getting a new problem here. Why does this company have so many M anyway.
+
+WW is an abbreviation of [World War] the PC browser game we\'re working hard on. It\'s an orthodox strategy game with a bit of additional social functions.
+
+"Didn\'t they tell us not to lower the difficulty anymore because they were afraid their main target base wouldn\'t play it if we did?"
+
+That\'s right, the current difficulty level was decided upon after several meetings with the client. Those wastes of time were really a waste huh. Blah.
+
+"Can\'t we just add back the canceled functions we came up with initially, the Entire Map Exploration and the three map annihilation bombs? We can give rewards like a rare title or something to those who don\'t use it until the end so those who are good won\'t use it themselves, how about it?"
+
+"We\'ve got no more time, let\'s go with that~ Then, Suzuki-san, go for it."
+Mr. Obese said it nonchalantly like usual.
+
+"Hold it right there. I\'m currently busy debugging the MMO-RPG, go get the OK from our client first. We don\'t have time to fix it if they reject the idea after we put it in."
+"OK. I\'m gonna give \'em a call now."
+
+Mr. Obese went into the smoking area with his phone in one hand while swaying his large build around.
+
+Afterward, I continued to work while muttering to myself.
+Along the way, Mr. Obese gave the GO sign, and I deceived my hunger with some junk food as the night deepened.
+
+I corrected the countless careless mistakes that Junior-shi left behind until midnight, and then left the rest to the debug team.
+Oh right, what was the name again? We always call it with \'MMO\' or \'RPG\', I can\'t seem to recall the official name. Oh right, it\'s [FREEDOM FANTASY WORLD]. It\'s easy to mix up with WW\'s former name, [FANTASY WAR WORLD], so no one used it. That reminds me, the code name was FFW in the specification document. Later on, WW lost the [FANTASY] part, so it\'s not really confusing now, but too late by then.
+
+While working on correcting WW, I also deal with new bug reports from the debug team.... Another all nighter huh.
+
+The check continued on until early in the next morning, and I miraculously managed to deliver the MMO-RPG client program.
+
+Of course, there\'s still some bugs remaining, but we have this trump card called [Update Patches] with web distributed games, so no worries there. I can hear the users booing already, but I\'m sleepy. I forwarded the corrected WW executable package from the debug team to Mr. Obese with intra-office mail, and took my first sleep in 30 hours under my desk.
+
+Ah, bliss. Laugh all you want at this corporate slave. Right now, sleep is justice.
+
+
+
+◇
+<TLN: If you\'re reading this novel at any other site than Sousetsuka .com you might be reading an unedited, uncorrected version of the novel.>
+
+
+Are you familiar with lucid dreams?
+It\'s a dream where you\'re aware that you\'re inside your own dream.
+
+Right now, I\'m in a wasteland.
+
+I was going to say Poru-san\'s famous line, but I held myself back.
+
+That\'s right, a wasteland. I\'d imagine it\'s like the Grand Canyon in the United States.
+
+How did I know this is a dream?
+
+One, I remember falling asleep under my desk. As for the other one, I can see four 『Icons』 in the lower right corner of my view, and a gadget written as 『Menu』 in the upper right corner.
+
+The same as WW I just worked on.
+
+However! This isn\'t the first time I\'m dreaming about debugging after falling asleep in the middle of a death march. Though, I have no clue why it\'s in a wasteland, and not my workspace or my own room...
+
+Maybe it\'s because the room I was in was too dry or something.
+
+I tap on the Menu just because and look at the menu screen. A near-futuristic looking semi-transparent window gets displayed in my view... Sheesh, I weep at my lack of imagination, there\'s really no way I can apply as a designer or a planner even by mistake.
+
+The Menu is separated with tabs, and besides the usual [INFO], [MAP], [UNIT MANAGEMENT], [STORAGE], [ALTERNATE], [LOG], and [SETTING] entries, there\'s some new ones, [STATUS], [EQUIPMENT], [MAGIC], [SKILL] that shouldn\'t exist in WW.
+
+Did it get mixed up with FFW that I debugged together last night.
+
+Well, no point in demanding consistency in a dream.
+
+Looking at Status, my Level is 1, all attribute values including HP and MP are 10 points. These are the basic status values before you allocate bonus points. Come to think of it, this was the last thing I checked, the Character Making value test.
+
+Hm? What are these \'Type of Occupation\', \'Rewards and Punishments\', etc, they shouldn\'t exist in FFW though? Where\'d they come from.
+Age is 15 year old... Was I unconsciously wishing to re-experience school days or something?
+[Type of Occupation: Managerial], I don\'t have a single subordinate even now though!
+Still, the fact that there\'s this [Affiliation: None], wonder if I actually wish to change job...
+
+These entries are truly profound... Ah, I want a vacation.
+
+Stuff like Unique Skill (Ability), [Unit Creation] and [Unit Arrangement] are probably mixed in from WW, but is there any point for the Unique Skill (Ability) column to be listed on the Menu?
+And what is this [Indestructible] column at the end? What a mysterious dream.
+
+My Equipment are a polo shirt, chinos pants, and sneakers. Hey, they\'re my attires from yesterday. The Storage has a wallet, a phone, and a yellow box with impressively balanced diet inside. Oh right, I was going to eat it but lost to my drowsiness so I left it on the desk.
+
+[Magic] and [Skill] are a blank space.
+I have 10 skill points on the Status Screen, but there\'s nothing to allocate it on, tragic.
+
+I open [Setting] and add Radar and Map as basic functions. Map displays a wide area and the location I\'m at. Radar is almost the same as Map, but it displays all units in an explored area regardless whether they\'re friends, foes or neutral parties.
+
+Radar only shows a small white dot indicating me. It\'s displaying a 100 meter wide area around me, the rest is grayed out.
+
+"Umu, no enemy in sight. Boring. If only I were in a plain, I would have lay down and indulge myself in sloth."
+I\'m not into lying down on a rugged ground.
+
+I nonchalantly look at the four icons on the lower right. There\'s one [Explore Entire Map] and three [Meteor Showers]. It\'s the emergency plan for beginners that I threw together haphazardly after a briefing session with Mr. Obese.
+
+[Explore Entire Map] is just as the name suggests, it explores everything within the Map you\'re in. In addition, it enables you to browse everything about units in the map including their weakness.
+There\'s too much info that it\'s useless without a certain amount of knowledge though, but Mr. Obese insisted on it so I implemented it anyway.
+
+I tap on it like I would a smartphone to test it.
+The Radar gets fully filled in, displaying countless red dots indicating enemy. I lower the Radar\'s magnification, showing a wider area.
+There\'s so many enemy here, half of the Map is buried in red... Don\'t you think there\'s way too many?
+
+Gotta make my own army [Units] against this many foes!
+Fighting off a huge army with a small force sure fires you up!
+
+
+
+◇
+
+
+
+...There were times when I thought that.
+
+[Unit Creation].... No possible unit to create.
+[Unit Arrangement].... No created unit.
+
+"Are you telling a level 1 character to charge at these lololol"
+As expected of a dream. Way to turn up the absurdity.
+
+I glanced at the [Meteor Shower] icons in the lower right corner.
+
+This must be heaven\'s wills telling me to annihilate them with [Meteor Shower]!
+
+The parameter of [Meteor Shower] was set while I was in high tension during an all-nighter. It\'s got a stupid amount of power enough to defeat everything other than the last boss in the campaign scenario, and the hidden bosses.
+
+I wanted to send a message to beginners, [Please use these on the maps you can\'t finish].
+
+Wanna push it?
+＞Yes
+ＹＥＳ
+You bet I do, Yaruttseburakkin
+
+Something\'s not quite right with that last part.
+Perhaps I\'m still high off an all-nighter, I tap one of the icons.
+
+...The silence is deafening.
+I had such a huge expectation, yet nothing\'s happening?
+
+I sulk right there while feeling a bit sad. The rugged ground on my back feels painful.
+And then, those things come into my view as I look at the sky....
+
+
+
+
+Thanks for waiting.
+
+We\'re finally back at the opening scene.
+
+Real name, Suzuki Ichirou. Character name, Satou, this is how my life in a parallel world began.
+
+
+
+
+(Author\'s note below)
+My first time writing novel
+It sure is hard   
+
+
+
+※Attention
+Satou\'s Unique Skills (Special Ability) besides Menu won\'t have their turn until the final stage of the story.

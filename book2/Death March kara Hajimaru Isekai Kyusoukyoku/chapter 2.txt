@@ -1,0 +1,191 @@
+﻿Hello, Suzuki here.
+
+Having weak presence, I\'ve been called Satou since my school days for some reason, this is Suzuki.
+
+Even though you don\'t feel pain in a dream, you can still feel the signs of pain when you dream of dental caries.
+
+No?
+
+Well, that\'s good too.
+
+<TLN: This is how a chapter begin whenever it feature Satou\'s perspective, it usually don\'t have anything to do with the actual plot at all. Just some random musing, so don\'t think too much of it>
+
+◇
+
+I seem to have fainted for two hours following the severe pain after the Meteor Shower receded.
+
+Time is displayed on the menu. Convenient.
+
+My body is half buried in the ground.
+
+Huh? I can\'t get up...
+
+Feels like when you can\'t get up off the bed during winter.
+
+My hands seems to move but menu operation is troublesome since it feels heavy.
+
+If only I had ESP to operate the menu and check the log.
+
+When I imagined such thing, it really happened. Truly a dream. It\'s unrestricted in strange places.
+
+When I see the log while thinking that, the message [Satou Level Up] showed up and harassment-like [Chararacchara~] famous level up SFX rang when I scroll through the log.
+
+Continuing for a while, I finally found a different message log.
+
+> Skill [Summoning Magic: Foreign World] Acquired.
+
+> Summoning Magic [Meteor Shower] Acquired.
+
+<TLN:Whoops, was also skill earlier. Edited>
+
+[Meteor Shower] is that meteorite summoning magic, right?
+
+A magic that does not exist in FFW. Summoning magic is only supposed to summon spirits or golems. Though the world part bugs me. There is no [Foreign World] in either FFW or WW. It bothers me even for a dream.
+
+The [Level Up] messages continue on.
+
+Since there\'s a time stamp, the order of message can\'t be wrong. In order it\'s [Skill Acquired] [Magic that belongs to the Skill Acquired] [Level up]
+
+In other words, this is the kind of RPG that does not let you automatically learn skill and magic as your level rise! <TLN: They work independently, you can learn skill or magic regardless of level when you meet the required condition>
+
+"No no, why am I doing analysis inside my dream..."
+
+Apparently my habit of analyzing thing from gamer era surfaced.
+
+But it\'s alright, even if it\'s embarrassing inside a dream, let\'s continue the analysis.
+
+Even in this situation, my real body is properly taking a rest anyway!
+
+I close the log and decided to check the magic and skill tabs.
+
+"But, before that."
+
+I set the [Log] to open by default from [Setting].
+
+It\'s troublesome to switch every time.
+
+The magic are [Meteor Shower] and [All Map Exploration].
+
+The skills are [Summoning Magic: Foreign World][Nature Magic: Foreign World].
+
+Seems that [All Map Exploration] belongs to the nature magic category.
+
+Are usable magic and skills registered?
+
+But I can\'t use it if I don\'t remember it anyway, this time the exclusive use of initial bonus seems to be an irregular pattern. As a programmer I immediately deny the notion.
+
+My status has changed considerably. After all, my level has been raised to 310 from 1. The limit in FFW should have been 50 at the time I went to sleep. Though we raised it to infinity when we ran stress tests for the server, so the memory from that time might\'ve affected this dream.
+
+Experience point is lined up to astronomical 9 digit number I don\'t feel like reading it. I want to have a comma splice for every three digits. Let\'s propose it for the next update.
+
+Strength (STR) and Intelligence (INT) attribute values are 99. FFW client stopped the value at 99 but there is no actual upper limit. During the time when we lift off level restriction the attribute value also rises accordingly... In other word, the actual value might be higher here too?
+
+Endurance (HP) and MP (Magic Power), and Stamina (SP) became 3100 harmoniously. These were set to rise by a fixed 10 for each level. There are many approaches to reduce consumption by various skills.
+
+It\'s made this way since, according to the Planner, the adjustment is troublesome if we raise each one differently.
+
+In addition, availale skill points are also 3100.
+
+Did it decrease from the acquired skill earlier?
+
+When I properly look at the skill column, both skills just now are greyed out. [Magic Art : Foreign World Lv0] shows up when I tap it. Tapping the Lv text shows [Please Allocate Point (1-10)] confirmation dialogue, so I tried to put 10.
+
+Without any SFX the text becomes white and changes to [Magic Art: Foreign World Lv10]. Skill points become 3090. 1 level = 1 skill point. Easy to understand. When I try to tap on it again, [Maximum Level] message shows up.
+
+On the magic column, [All Map Exploration] text is white while [Meteor Shower] remains in grey.
+
+It seems that you can\'t meet the condition to use magic if you don\'t allocate points to the skill level. So I also put 10 point to [Summoning Magic: Foreign World Lv0].
+
+There are also many things added to title column.
+
+First [Monster Slayer]. Yep, I understand this. Then [Scale Tribe Slayer][Scale Tribe Calamity][Scale Tribe Natural Enemy] I\'m not sure what scale tribe mean but they\'re probably reptile monsters. Furthermore, [Wyvern Slayer][Dragon Slayer[Lower]][Dragon Slayer[Infant]][Dragon Slayer[Adult]][Dragon Slayer[Ancient]], and other [Dragon Slayer] with [] inside continue endlessly.
+
+Well, with this many dragons I can understand why such an impossible level-up to the 300 range happened. The map was dyed red before the attack earlier.
+
+Then, just like the title for Scale Tribe, [Dragon Tribe Natural Enemy] appeared and the last title is [God Slayer].
+
+Do you believe in god?
+
+"Wait, when did I kill one?"
+
+I tap the log and search for [God].
+
+>Defeated the Dragon God AkonKagura!
+
+There, the cause for god slayer. I see, the meteor shower also killed the god.
+
+I see, I killed it...
+
+Only 2 remain, god slaying technique!!
+
+No no, why would I kill them?
+
+However, the log doesn\'t show damage so I don\'t know how powerful it was. In FFW and WW, the last blows damage should have been displayed but... I guess there\'s no point questioning a dream.
+
+Since it\'s become easier to move, I raise my body.
+
+I turned off the display icon for [Meteor Shower] in [Setting] since I don\'t want to become the enemy of humanity by carelessly clicking it.
+
+Oh right, I haven\'t used the the magic column yet.
+
+I switched to the tab with [All Map Exploration] and [Meteor Shower] in it. Now then, how do I use it. I wonder if tapping it normally work.
+
+There is no particular change when I try to use [All Map Exploration].
+
+When I check the log there\'s [Magic: All Map Exploration used] message. MP become 3090 in the status. Seems like it uses 10 MP. I added HP and MP to the basic indicator since it\'s annoying to check it every time.
+
+There\'s nothing reflected in the radar besides myself.
+
+It\'s nice that there\'s no enemy but mass killing like this is not funny. No, wait, it\'s normal for a game.
+
+Since there are no victims I guess it\'s okay? I slowly tap on [Meteor Shower]. It feels like something is greatly pulling out my vigor. I saw my MP continue to decrease. It stopped after consuming exactly 1000 points.
+
+It didn\'t feel like this the first time I use it, guess it wasn\'t using my own magic power back then.
+
+I look up at the sky. There\'s no meteorite yet. Considering before, it should be soon.
+
+And then groups of meteorites tore apart the cloud.
+
+Huge. What the heck is that.
+
+It\'s 100 times bigger than the earlier meteorites.
+
+I instinctively run before thinking.
+
+Of course toward the opposite side of the drop zone.
+
+I run as fast as I can with the continuous huge meteorite impact sound in the background.
+
+As if running through water, the air resistance is too strong. It normally feels sluggish when you run in dream, is it just me?
+
+I rolled over to the other side of a table-like small wall of rocks. Even though I said small, it\'s about 100 meter in radius so it will do fine as a shield.
+
+A tsunami of dust sweeps apart just right after I went into the shelter. People-sized rock occasionally roll through the dust cloud, my spine becomes a bit cold.
+
+I wonder how long it will elapse. When the dust cloud settled I climb the rock wall to see at the fall.
+
+Since the slope is pretty steep I tried jumping over 50 cm height.
+
+Pon. I fly 5 meter feeling like hearing such SFX.
+
+Landing on the ledge of a rock with slight panic.
+
+"This status rise, what a joke~"
+
+I tried to deceive my trembling body by speaking to myself.
+
+"That giant meteorite earlier is probably thanks to INT increase too~"
+
+I run up the wall by alternatively kicking through various ledges and rock edges like some kind of ninja in games and manga. How convenient. Even in a dream, I have pretty high adaptability if I may say so myself.
+
+I can see the collapse of a mushroom cloud in the distance. Most likely, it\'s sediment that got caught up on the fall. This would create crop failure and health damage disaster if this was the real world, due to reduction of sunshine.
+
+"It\'s a dream anyway, there\'s no helping it even if I think about it."
+
+I think it\'s bad that it\'s too real.
+
+
+
+
+
+TL Note: I changed Spirit World to Foreign World since I realized that it\'s actually about summoning the meteorite and don\'t want to confuse it with Seirei which also translate to Spirit. I\'m sorry for people who have read it early.
