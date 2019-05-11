@@ -15,6 +15,7 @@
 	}
 
 	class Chapter
+	// Detail version of Chapter with data
 	{
 		function Chapter($chapter_id,$book_id,$name,$data,$number_of_read){
 			$this->chapter_id 		= $chapter_id;
@@ -24,6 +25,19 @@
 			$this->number_of_read 	= $number_of_read;
 		}
 	}
+
+	class Chapter_simple
+	// simple version of Chapter without data
+	{
+		function Chapter_simple($chapter_id,$book_id,$name,$number_of_read,$upload_date){
+			$this->chapter_id 		= $chapter_id;
+			$this->book_id			= $book_id;
+			$this->name 			= $name;
+			$this->number_of_read 	= $number_of_read;
+			$this->upload_date		= $upload_date;
+		}
+	}
+
 
 	class DbOperation
 	{
@@ -121,6 +135,38 @@
 
 		}
 
+		public function getAllChapter($book_id){
+			$stmt = $this->con->prepare("SELECT * FROM chapter WHERE book_id = ?");
+			$stmt->bind_param("s",$book_id);
+			$stmt->execute();
+			$array_book = array();
+			$data = $stmt->get_result();
+			if($data){
+					while ($row = $data->fetch_array(MYSQLI_NUM))
+					{
+
+							$row[0] = utf8_encode($row[0]);
+		    				$row[1] = utf8_encode($row[1]);
+		    				$row[2] = utf8_encode($row[2]);
+		    				$row[3] = utf8_encode($row[4]);
+		    				$row[4] = utf8_encode($row[5]);
+
+		    				array_push($array_book,new Chapter_simple($row[0],$row[1],
+														 $row[2],
+														 $row[4],
+														 $row[5]));
+					}
+					return $array_book;
+
+				}
+
+			else{
+				echo "NULL";
+			}
+
+
+		}
+
 		public function getchapterInfor($book_id,$chaper_id){
 			$stmt = $this->con->prepare("SELECT * FROM chapter WHERE book_id = ? AND chapter_id = ?");
 			$stmt->bind_param("ss",$book_id,$chaper_id);
@@ -157,4 +203,6 @@
 			}
 
 		}
+
+
 	}
