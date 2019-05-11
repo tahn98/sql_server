@@ -33,4 +33,7 @@ else{
 	$response['error'] = true;
 	$response['message'] = "Invalid Request";
 }
+
+echo "[";
 echo json_encode($response);
+echo "]";
