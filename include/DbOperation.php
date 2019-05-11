@@ -17,12 +17,12 @@
 	class Chapter
 	// Detail version of Chapter with data
 	{
-		function Chapter($chapter_id,$book_id,$name,$data,$number_of_read){
-			$this->chapter_id 		= $chapter_id;
-			$this->book_id			= $book_id;
-			$this->name 			= $name;
+		function Chapter($data){
+			// $this->chapter_id 		= $chapter_id;
+			// $this->book_id			= $book_id;
+			// $this->name 			= $name;
 			$this->data				= $data;
-			$this->number_of_read 	= $number_of_read;
+			// $this->number_of_read 	= $number_of_read;
 		}
 	}
 
@@ -157,16 +157,13 @@
 														 $row[5]));
 					}
 					return $array_book;
-
 				}
 
 			else{
 				echo "NULL";
 			}
 
-
 		}
-
 		public function getchapterInfor($book_id,$chaper_id){
 			$stmt = $this->con->prepare("SELECT * FROM chapter WHERE book_id = ? AND chapter_id = ?");
 			$stmt->bind_param("ss",$book_id,$chaper_id);
@@ -176,30 +173,15 @@
 			if($data){
 					while ($row = $data->fetch_array(MYSQLI_NUM))
 					{
-
-					// $row[0] = iconv(mb_detect_encoding($row[0], mb_detect_order(), true), "UTF-8", $row[0]);
-			    	// 			$row[1] = iconv(mb_detect_encoding($row[1], mb_detect_order(), true), "UTF-8", $row[1]);
-			    	// 			$row[2] = iconv(mb_detect_encoding($row[2], mb_detect_order(), true), "UTF-8", $row[2]);
-			    	// 			$row[3] = iconv(mb_detect_encoding($row[3], mb_detect_order(), true), "UTF-8", $row[3]);
-			    	// 			$row[4] = iconv(mb_detect_encoding($row[4], mb_detect_order(), true), "UTF-8", $row[4]);
-
-							$row[0] = utf8_encode($row[0]);
-		    				$row[1] = utf8_encode($row[1]);
-		    				$row[2] = utf8_encode($row[2]);
+							// $row[0] = utf8_encode($row[0]);
+		    	// 			$row[1] = utf8_encode($row[1]);
+		    	// 			$row[2] = utf8_encode($row[2]);
 		    				$row[3] = utf8_encode($row[3]);
-		    				$row[4] = utf8_encode($row[4]);
+		    				// $row[4] = utf8_encode($row[4]);
 
-		    				array_push($array_book,new Chapter($row[0],$row[1],
-														 $row[2],
-														 $row[3],
-														 $row[4]));
+		    				array_push($array_book,new Chapter($row[3]));
 					}
 					return $array_book;
-
-				}
-
-			else{
-				echo "NULL";
 			}
 
 		}
