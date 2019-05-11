@@ -232,5 +232,15 @@
 
 		}
 
+		public function InsertComment($user_id,$book_id,$comment_text,$comment_date){
 
+			$stmt = $this->con->prepare("INSERT INTO `comment` VALUES (null,?,?,?,?);");
+			$stmt->bind_param("ssss",$comment_text,$book_id,$user_id,$comment_date);
+			if($stmt->execute()){
+				return 1;
+			}
+			else{
+				return 2;
+			}	
+		}
 	}
