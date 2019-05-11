@@ -38,6 +38,18 @@
 		}
 	}
 
+	class Comment
+	// simple version of Chapter without data
+	{
+		function Comment($comment_text,$comment_date,$user_id,$name){
+			$this->comment_text 		= $comment_text;
+			$this->comment_date			= $comment_date;
+			$this->user_id 				= $user_id;
+			$this->name 				= $name;
+
+		}
+	}
+
 
 	class DbOperation
 	{
@@ -176,10 +188,44 @@
 							// $row[0] = utf8_encode($row[0]);
 		    	// 			$row[1] = utf8_encode($row[1]);
 		    	// 			$row[2] = utf8_encode($row[2]);
+		    				
 		    				$row[3] = utf8_encode($row[3]);
 		    				// $row[4] = utf8_encode($row[4]);
 
 		    				array_push($array_book,new Chapter($row[3]));
+					}
+					return $array_book;
+			}
+
+		}
+
+		// Insert Book mark of user
+		public function InsertBookMark($user_id,$book_id){
+			$stmt = $this->con->prepare("INSERT INTO bookmark VALUES (null,?,?);");
+			$stmt->bind_param("ss",$user_id,$book_id);
+			$stmt->execute();
+			$stmt->store_result();
+			//echo $stmt->get_result();
+			return $stmt->num_rows > 0; 
+		}
+
+
+		public function getAllComment($book_id){
+			$stmt = $this->con->prepare("SELECT E.comment_text,E.comment_date,E.user_id,F.name FROM (SELECT * FROM comment WHERE book_id = ? ORDER BY comment_date) E ,(SELECT user_id,name FROM user) F WHERE E.user_id = F.user_id");
+			$stmt->bind_param("s",$book_id);
+			$stmt->execute();
+			$array_book = array();
+			$data = $stmt->get_result();
+			if($data){
+					while ($row = $data->fetch_array(MYSQLI_NUM))
+					{
+							$row[0] = utf8_encode($row[0]);
+		    				$row[1] = utf8_encode($row[1]);
+		    				$row[2] = utf8_encode($row[2]);
+		    				$row[3] = utf8_encode($row[3]);
+		    				// $row[4] = utf8_encode($row[4]);
+
+		    				array_push($array_book,new Comment($row[0],$row[1],$row[2],$row[3]));
 					}
 					return $array_book;
 			}
