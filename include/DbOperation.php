@@ -292,7 +292,7 @@
 		    											 $row[5]));
 					}
 					return $array_book;
-					return $array_book;
+					// return $array_book;
 			}
 		}
 
@@ -348,6 +348,64 @@
 			$stmt->execute();
 			$stmt->store_result();
 			return $stmt->num_rows > 0;
+		}
+
+		public function InsertRating($user_name,$book_id,$rate){
+			
+			$stmt = $this->con->prepare("SELECT user_id FROM user WHERE name = ? ;");
+			$stmt->bind_param("s",$user_name);
+			$stmt->execute();
+			$user_id = $stmt->get_result()->fetch_assoc()['user_id'];
+
+			/// if user has been rated for this book - > remove it
+			if ($this->ViewRating($user_name,$book_id)['isRating'])
+			{
+				if ($this->ViewRating($user_name,$book_id)['rate'] == $rate){
+					return 1;
+					// return (do nothing) 
+				}
+				$stmt = $this->con->prepare("DELETE FROM rating WHERE user_id  = ? AND book_id = ?;");
+				$stmt->bind_param("ss",$user_id,$book_id);
+				if($stmt->execute()==false) return 2;
+
+			}
+			// And then, Insert new Rating
+			$stmt = $this->con->prepare("INSERT INTO rating VALUES (null,?,?,?);");
+			$stmt->bind_param("sss",$rate,$user_id,$book_id);
+			if($stmt->execute()){
+				return 1;
+			}
+			else{
+				return 2;
+			}	
+		}
+
+		public function ViewRating($user_name,$book_id){
+			
+			$stmt = $this->con->prepare("SELECT user_id FROM user WHERE name = ? ;");
+			$stmt->bind_param("s",$user_name);
+			$stmt->execute();
+			$user_id = $stmt->get_result()->fetch_assoc()['user_id'];
+
+			$stmt = $this->con->prepare("SELECT rate FROM rating WHERE user_id = ? AND book_id = ? ;");
+			$stmt->bind_param("ss",$user_id,$book_id);
+			$stmt->execute();
+			$stmt->store_result();
+			
+			$response = array();
+			
+			$response['isRating'] = false;
+			$response['rate'] = "NONE";
+
+			if( $stmt->num_rows > 0){
+
+				$stmt->execute();
+				$row = $stmt->get_result()->fetch_assoc()['rate'];
+
+				$response['isRating'] = true;
+				$response['rate'] = $row;
+			}
+			return $response;
 		}
 
 	}
