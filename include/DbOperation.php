@@ -296,6 +296,60 @@
 			}
 		}
 
+		public function ChangeFavorite($user_name,$book_id){
+			
+			/*	if yes -> no
+				if no -> yes
+			*/
+
+
+			$stmt = $this->con->prepare("SELECT user_id FROM user WHERE name = ? ;");
+			$stmt->bind_param("s",$user_name);
+			$stmt->execute();
+			$user_id = $stmt->get_result()->fetch_assoc()['user_id'];
+
+			if ($this->IsFavorite($user_name,$book_id))
+			{//yes -> no
+			 	// remove something
+				//
+				$stmt = $this->con->prepare("DELETE FROM bookmark WHERE user_id  = ? AND book_id = ?;");
+				$stmt->bind_param("ss",$user_id,$book_id);
+				if($stmt->execute()){
+					return 1;
+				}
+				else{
+					return 2;
+				}	
+
+			}
+			else{
+				//no - > yes : insert something
+				$stmt = $this->con->prepare("INSERT INTO bookmark VALUES (null,?,?);");
+				$stmt->bind_param("ss",$user_id,$book_id);
+				if($stmt->execute()){
+					return 1;
+				}
+				else{
+					return 2;
+				}	
+			}
+
+		}
+
+		public function IsFavorite($user_name,$book_id){
+			
+			$stmt = $this->con->prepare("SELECT user_id FROM user WHERE name = ? ;");
+			$stmt->bind_param("s",$user_name);
+			$stmt->execute();
+			$user_id = $stmt->get_result()->fetch_assoc()['user_id'];
+
+			$stmt = $this->con->prepare("SELECT * FROM bookmark WHERE user_id = ? AND book_id = ? ;");
+			$stmt->bind_param("ss",$user_id,$book_id);
+			$stmt->execute();
+			$stmt->store_result();
+			return $stmt->num_rows > 0;
+		}
+
 	}
 
 
