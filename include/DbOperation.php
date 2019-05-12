@@ -269,7 +269,7 @@
 			$user_id = $stmt->get_result()->fetch_assoc()['user_id'];
 
 
-			$stmt = $this->con->prepare("SELECT F.book_id,F.name,F.cover FROM (SELECT user_id,book_id FROM bookmark WHERE user_id = ?) E,book F WHERE E.book_id = F.book_id");
+			$stmt = $this->con->prepare("SELECT B.book_id,B.name,B.description,B.author_name,B.cover,B.rating FROM (SELECT user_id,book_id FROM bookmark WHERE user_id = ?) A,(SELECT E.book_id,E.name,E.description,E.author_name,E.cover,F.rating FROM book E ,(SELECT book_id,AVG(rate) as rating FROM rating GROUP BY book_id ORDER BY book_id) F WHERE E.book_id = F.book_id) B WHERE A.book_id = B.book_id");
 			$stmt->bind_param("s",$user_id);
 			$stmt->execute();
 			$array_book = array();
@@ -277,12 +277,21 @@
 			if($data){
 					while ($row = $data->fetch_array(MYSQLI_NUM))
 					{
+
 							$row[0] = utf8_encode($row[0]);
 		    				$row[1] = utf8_encode($row[1]);
 		    				$row[2] = utf8_encode($row[2]);
-
-		    				array_push($array_book,new FavoriteBook($row[0],$row[1],$row[2]));
+		    				$row[3] = utf8_encode($row[3]);
+		    				$row[4] = utf8_encode($row[4]);
+		    				$row[5] = utf8_encode($row[5]);
+		    				
+		    				array_push($array_book,new Book($row[0],$row[1],
+														 $row[2],
+														 $row[3],
+														 $row[4],
+		    											 $row[5]));
 					}
+					return $array_book;
 					return $array_book;
 			}
 		}
@@ -292,3 +301,13 @@
 
 
 //SELECT F.book_id,F.name,F.cover FROM (SELECT user_id,book_id FROM bookmark WHERE user_id = 2) E,book F WHERE E.book_id = F.book_id
+
+
+
+/*
+SELECT B.book_id,B.name,B.description,B.author_name,B.cover,B.rating FROM (SELECT user_id,book_id FROM bookmark WHERE user_id = 1) A,(SELECT E.book_id,E.name,E.description,E.author_name,E.cover,F.rating FROM book E ,(SELECT book_id,AVG(rate) as rating FROM rating GROUP BY book_id ORDER BY book_id) F WHERE E.book_id = F.book_id) B WHERE A.book_id = B.book_id
+
+
+
+SELECT B.book_id,B.name,B.description,B.author_name,B.cover FROM (SELECT user_id,book_id FROM bookmark WHERE user_id = 1) A,book B WHERE A.book_id = B.book_id
+*/	
