@@ -245,7 +245,12 @@
 
 		}
 
-		public function InsertComment($user_id,$book_id,$comment_text,$comment_date){
+		public function InsertComment($user_name,$book_id,$comment_text,$comment_date){
+			
+			$stmt = $this->con->prepare("SELECT user_id FROM user WHERE name = ? ;");
+			$stmt->bind_param("s",$user_name);
+			$stmt->execute();
+			$user_id = $stmt->get_result()->fetch_assoc()['user_id'];
 
 			$stmt = $this->con->prepare("INSERT INTO `comment` VALUES (null,?,?,?,?);");
 			$stmt->bind_param("ssss",$comment_text,$book_id,$user_id,$comment_date);
