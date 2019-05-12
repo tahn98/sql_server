@@ -14,13 +14,16 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 		$result =  $db->userLogIn($_POST['username'],$_POST['password']);
 
 		if($result == true){
-			$user = $db->getUserByUserName($_POST['username']);
-			$response['error'] = true;
-			$response['message'] = "Missing field";
-			$response['id'] = $user['id'];
-			$response['email'] = $user['email'];
-			$response['username'] = $user['username'];
+			// $user = $db->getUserByUserName($_POST['username']);
+			$response['error'] = false;
+			$response['message'] = "Successfully";
+			// $response['id'] = $user['id'];
+			// $response['email'] = $user['email'];
+			// $response['username'] = $user['username'];
 
+		}else{
+			$response['error'] = true;
+			$response['message'] = "Error";
 		}
 	}
 	else{
@@ -32,4 +35,6 @@ else{
 	$response['error'] = true;
 	$response['message'] = "Invalid Request";
 }
+echo "[";
 echo json_encode($response);
+echo "]";

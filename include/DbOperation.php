@@ -82,7 +82,7 @@
 			}
 			else{
 				$password = md5($pass);
-				$stmt = $this->con->prepare("INSERT INTO `user` (`id`, `username`, `password`, `email`) VALUES (NULL,?,?,? );");
+				$stmt = $this->con->prepare("INSERT INTO `user` (`user_id`, `name`, `password`, `email`) VALUES (NULL,?,?,? );");
 				$stmt->bind_param("sss",$username,$password,$email);
 				if($stmt->execute()){
 					return 1;
@@ -95,7 +95,7 @@
 		//chưa sửa
 		public function userLogIn($username,$password){
 			$pass = md5($password);
-			$stmt = $this->con->prepare("SELECT id FROM user WHERE username = ? AND password = ?");
+			$stmt = $this->con->prepare("SELECT user_id FROM user WHERE name = ? AND password = ?");
 			$stmt->bind_param("ss",$username,$pass);
 			$stmt->execute();
 			$stmt->store_result();
@@ -104,7 +104,7 @@
 		}
 		//chưa sửa
 		public function getUserByUserName($username){
-			$stmt = $this->con->prepare("SELECT * FROM user WHERE username = ?");
+			$stmt = $this->con->prepare("SELECT * FROM user WHERE name = ?");
 			$stmt->bind_param("s",$username);
 			$stmt->execute();
 			return $stmt->get_result()->fetch_assoc();	
@@ -112,7 +112,7 @@
 		}
 		//chưa sửa
 		private function isUserExit($username,$email){
-			$stmt = $this->con->prepare("SELECT id FROM user WHERE username = ? OR email = ?");
+			$stmt = $this->con->prepare("SELECT user_id FROM user WHERE name = ? OR email = ?");
 			$stmt->bind_param("ss",$username,$email);
 			$stmt->execute();
 			$stmt->store_result();
