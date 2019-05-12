@@ -256,7 +256,13 @@
 				return 2;
 			}	
 		}
-		public function GetAllFavoriteBook($user_id){
+		public function GetAllFavoriteBook($user_name){
+
+			$stmt = $this->con->prepare("SELECT user_id FROM user WHERE name = ? ;");
+			$stmt->bind_param("s",$user_name);
+			$stmt->execute();
+			$user_id = $stmt->get_result()->fetch_assoc()['user_id'];
+
 
 			$stmt = $this->con->prepare("SELECT F.book_id,F.name,F.cover FROM (SELECT user_id,book_id FROM bookmark WHERE user_id = ?) E,book F WHERE E.book_id = F.book_id");
 			$stmt->bind_param("s",$user_id);
@@ -269,7 +275,6 @@
 							$row[0] = utf8_encode($row[0]);
 		    				$row[1] = utf8_encode($row[1]);
 		    				$row[2] = utf8_encode($row[2]);
-		    				// $row[4] = utf8_encode($row[4]);
 
 		    				array_push($array_book,new FavoriteBook($row[0],$row[1],$row[2]));
 					}
