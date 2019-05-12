@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 	if(	isset($_POST['username']) and isset($_POST['email']) and isset($_POST['password']) )
 	{
 		$db = new DbOperation();
-		$result =  $db->createUser($_POST['username'],$_POST['email'],$_POST['password']);
+		$result =  $db->createUser($_POST['username'],$_POST['password'],$_POST['email']);
 		if($result == 1){
 			$response['error'] = false;
 			$response['message'] = "Successful";
