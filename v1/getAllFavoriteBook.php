@@ -6,10 +6,10 @@ $response = array();
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
 
-	if(	isset($_POST['book_id']) and isset($_POST['user_id']))
+	if(	isset($_POST['user_id']) )
 	{
 		$db = new DbOperation();
-		$response =  $db->InsertBookMark($_POST['user_id'],$_POST['book_id']);
+		$response =  $db->GetAllFavoriteBook($_POST['user_id']);
 		
 	}
 	else{
@@ -21,6 +21,4 @@ else{
 	$response['error'] = true;
 	$response['message'] = "Invalid Request";
 }
-echo "[";
 echo json_encode($response);
-echo "]";

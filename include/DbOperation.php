@@ -51,6 +51,19 @@
 	}
 
 
+
+	class FavoriteBook
+	// simple version of Chapter without data
+	{
+		function FavoriteBook($book_id,$name,$cover){
+			$this->book_id 		= $book_id;
+			$this->name			= $name;
+			$this->cover 		= $cover;
+
+		}
+	}
+
+
 	class DbOperation
 	{
 		private $con;
@@ -62,7 +75,7 @@
 			$db = new DbConnect();
 			$this->con = $db->connect();
 		}
-		//chưa sửa
+		
 		public function createUser($username,$pass,$email){
 			if($this->isUserExit($username,$email)){
 				return 0;
@@ -243,4 +256,29 @@
 				return 2;
 			}	
 		}
+		public function GetAllFavoriteBook($user_id){
+
+			$stmt = $this->con->prepare("SELECT F.book_id,F.name,F.cover FROM (SELECT user_id,book_id FROM bookmark WHERE user_id = ?) E,book F WHERE E.book_id = F.book_id");
+			$stmt->bind_param("s",$user_id);
+			$stmt->execute();
+			$array_book = array();
+			$data = $stmt->get_result();
+			if($data){
+					while ($row = $data->fetch_array(MYSQLI_NUM))
+					{
+							$row[0] = utf8_encode($row[0]);
+		    				$row[1] = utf8_encode($row[1]);
+		    				$row[2] = utf8_encode($row[2]);
+		    				// $row[4] = utf8_encode($row[4]);
+
+		    				array_push($array_book,new FavoriteBook($row[0],$row[1],$row[2]));
+					}
+					return $array_book;
+			}
+		}
+
 	}
+
+
+
+//SELECT F.book_id,F.name,F.cover FROM (SELECT user_id,book_id FROM bookmark WHERE user_id = 2) E,book F WHERE E.book_id = F.book_id
