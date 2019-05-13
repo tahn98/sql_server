@@ -6,7 +6,8 @@ $response = array();
 if($_SERVER['REQUEST_METHOD']=='GET'){
 
 		$db = new DbOperation();
-		$response = $db->getAllBookInfor();
+		$option = 3;
+		$response = $db->getAllBookInfor($option);
 }
 else{
 

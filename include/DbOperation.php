@@ -119,10 +119,31 @@
 			return $stmt->num_rows > 0; 
 		}
 
-		public function getAllBookInfor(){
+		public function getAllBookInfor($option){
 			//$stmt = $this->con->prepare("SELECT * FROM book");
 
-			$stmt = $this->con->prepare("SELECT E.book_id,E.name,E.description,E.author_name,E.cover,F.rating FROM book E ,(SELECT book_id,AVG(rate) as rating FROM rating GROUP BY book_id ORDER BY book_id) F WHERE E.book_id = F.book_id");
+			// $stmt = $this->con->prepare("SELECT E.book_id,E.name,E.description,E.author_name,E.cover,F.rating FROM book E ,(SELECT book_id,AVG(rate) as rating FROM rating GROUP BY book_id ORDER BY book_id) F WHERE E.book_id = F.book_id");
+
+			$query = "";
+			if($option == 1){
+				// lấy 5 truyện hot rating
+				$query = "SELECT E.book_id,E.name,E.description,E.author_name,E.cover,F.rating FROM book E ,(SELECT book_id,AVG(rate) as rating FROM rating GROUP BY book_id ) F WHERE E.book_id = F.book_id ORDER BY F.rating DESC LIMIT 5 ";
+			}
+			elseif ($option == 2){
+				// lấy 5 truyện hot update
+				$query = "SELECT A.book_id,A.name,A.description,A.author_name,A.cover,B.rating FROM (SELECT E.book_id,E.name,E.description,E.author_name,E.cover from book E,(SELECT book_id FROM `chapter` GROUP BY book_id ORDER BY upload_date DESC) F WHERE E.book_id = F.book_id LIMIT 5) A,(SELECT book_id,AVG(rate) as rating FROM rating GROUP BY book_id ) B WHERE A.book_id = B.book_id LIMIT 5";
+			}
+			elseif($option == 3){
+				// lấy tất cả danh sách truyện
+				$query = "SELECT E.book_id,E.name,E.description,E.author_name,E.cover,F.rating FROM book E ,(SELECT book_id,AVG(rate) as rating FROM rating GROUP BY book_id ) F WHERE E.book_id = F.book_id ORDER BY F.rating DESC";
+			}
+
+			$stmt = $this->con->prepare($query);
+
+			////
+			////SELECT E.book_id,E.name,E.description,E.author_name,E.cover from book E,(SELECT book_id FROM `chapter` GROUP BY book_id ORDER BY upload_date DESC) F WHERE E.book_id = F.book_id
+			////
+
 			$stmt->execute();
 
 			$array_book = array();
@@ -130,12 +151,6 @@
 			if($data){
 					while ($row = $data->fetch_array(MYSQLI_NUM))
 					{
-
-							// $row[0] = iconv(mb_detect_encoding($row[0], mb_detect_order(), true), "UTF-8", $row[0]);
-		    	// 			$row[1] = iconv(mb_detect_encoding($row[1], mb_detect_order(), true), "UTF-8", $row[1]);
-		    	// 			$row[2] = iconv(mb_detect_encoding($row[2], mb_detect_order(), true), "UTF-8", $row[2]);
-		    	// 			$row[3] = iconv(mb_detect_encoding($row[3], mb_detect_order(), true), "UTF-8", $row[3]);
-		    	// 			$row[4] = iconv(mb_detect_encoding($row[4], mb_detect_order(), true), "UTF-8", $row[4]);
 
 							$row[0] = utf8_encode($row[0]);
 		    				$row[1] = utf8_encode($row[1]);
@@ -423,3 +438,10 @@ SELECT B.book_id,B.name,B.description,B.author_name,B.cover,B.rating FROM (SELEC
 
 SELECT B.book_id,B.name,B.description,B.author_name,B.cover FROM (SELECT user_id,book_id FROM bookmark WHERE user_id = 1) A,book B WHERE A.book_id = B.book_id
 */	
+
+
+							// $row[0] = iconv(mb_detect_encoding($row[0], mb_detect_order(), true), "UTF-8", $row[0]);
+		    	// 			$row[1] = iconv(mb_detect_encoding($row[1], mb_detect_order(), true), "UTF-8", $row[1]);
+		    	// 			$row[2] = iconv(mb_detect_encoding($row[2], mb_detect_order(), true), "UTF-8", $row[2]);
+		    	// 			$row[3] = iconv(mb_detect_encoding($row[3], mb_detect_order(), true), "UTF-8", $row[3]);
+		    	// 			$row[4] = iconv(mb_detect_encoding($row[4], mb_detect_order(), true), "UTF-8", $row[4]);
